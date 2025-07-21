@@ -115,7 +115,7 @@ class LinkedList {
     }
 }
 
-public class LinkedListRev {
+public class SinglyLinkedList {
     public static void main(String[] args) {
         LinkedList l1 = new LinkedList();
         l1.insertFirst(2);

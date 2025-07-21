@@ -18,10 +18,10 @@ class Node {
 
 }
 
-class BT {
+class BST {
     Node root;
 
-    public BT() {
+    public BST() {
         root = null;
     }
 
@@ -175,21 +175,12 @@ class BT {
              */
             int len = queue.size();
             System.out.print("Level: " + curLevel);
-
             for (int i = 0; i < len; i++) {
                 /*
-                 * 1) the len inside for loop i.e len=1 at start wont change coz its local
-                 * variable. after one iteration, it becomes 1<1 which becomes false
-                 * 
-                 * 2) after for loop ends, it checks while loop which will be true (!false=true)
-                 * since we offered nodes to queue THEREFORE RESULTING in CHANGE OF len which is
-                 * 2 according to the nodes inserted
-                 * 
-                 * 3) now for loop begins from i=0 till i<len
+                 * similar to pop(), it removes the first element (FIFO).
+                 * im assigning root to the node i.e node=root;
                  */
-
-                Node node = queue.poll(); // similar to pop(), it removes the first element (FIFO).im assigning root to
-                                          // the node i.e node=root;
+                Node node = queue.poll();
                 System.out.print(" -> " + node.val);
 
                 // by offering the node.left and node .right in queue, the size of queue
@@ -248,7 +239,7 @@ class BT {
 
 public class BinarySearchTree {
     public static void main(String[] args) {
-        BT obj1 = new BT();
+        BST obj1 = new BST();
         obj1.insert(4);
         obj1.insert(3);
         obj1.insert(2);
@@ -264,5 +255,7 @@ public class BinarySearchTree {
         obj1.search(7);
         System.out.println("\n");
         obj1.levelOrderTraversalDisplay();
+        obj1.remove(3);
+        obj1.inorderTraversalDisplay();
     }
 }

@@ -1,3 +1,5 @@
+package datastructure.LinkedListCode.DoublyLinkedList;
+
 class Node {
     int val;
     Node next;
@@ -62,8 +64,8 @@ class DoublyLinkedList {
             Node prevPointer = currPointer.prev;
             currPointer.prev = newNode;
             prevPointer.next = newNode;
+            size++;
         }
-        size++;
     }
 
     public void deleteFirst() {
@@ -78,6 +80,7 @@ class DoublyLinkedList {
         } else {
             head = head.next;
             head.prev = null;
+            size--;
             return;
         }
     }
@@ -94,6 +97,7 @@ class DoublyLinkedList {
         } else {
             tail = tail.prev;
             tail.next = null;
+            size--;
             return;
         }
     }
@@ -105,7 +109,7 @@ class DoublyLinkedList {
         } else if (index == 1) {
             head = null;
             tail = null;
-            size -= 1;
+            size--;
             return;
         } else {
             Node pointer = getReferenceOfNode(index);

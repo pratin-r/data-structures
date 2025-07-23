@@ -1,5 +1,3 @@
-package datastructure.LinkedListCode.DoublyLinkedList;
-
 class Node {
     int val;
     Node next;

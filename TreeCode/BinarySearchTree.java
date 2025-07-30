@@ -108,7 +108,7 @@ class BST {
      * IT GOES TO OTHER NODE.
      * 
      */
-    // in order traversal (left, root, right) -> same as sorted array
+    // in order traversal (left, root, right)
     public void inorderTraversalDisplay() {
         System.out.print("Inorder Traversal: ");
         inorderTraversal(root);

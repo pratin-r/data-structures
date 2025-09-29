@@ -1,0 +1,25 @@
+not the best solution but ive used priority queue since i was revising about it.
+
+i) PriorityQueue is a data structure which follows binary heap but the actual implementation is done in ArrayList.
+
+ii) Heap's main rule is that it should be 
+    a) the tree should be filled from left to right.
+    b) a complete binary tree (all levels are full except the last level).
+
+iii) There are two types of binary heap which is the min-heap and max-heap. In min-heap, the root node must be lesser than the other two child node and the vice versa goes for max-heap.
+
+
+class Solution {
+    public int lastStoneWeight(int[] stones) {
+        if (stones.length == 1) {
+            return stones[0];
+        }
+        Queue<Integer> q = new PriorityQueue<>();
+        Arrays.stream(stones).forEach(v -> q.offer(-v));
+        while (q.size() > 1) {
+            int a = Math.abs(q.poll()), b = Math.abs(q.poll());
+            q.offer(-(a - b));
+        }
+        return Math.abs(q.poll());
+    }
+}

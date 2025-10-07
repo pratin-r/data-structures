@@ -1,8 +1,9 @@
 {
   "java.project.sourcePaths": [
+    "TreeCode",
     "StackCode",
     "Sorting",
     "LinkedListCode",
-    "TreeCode"
+    "LeetcodeSolution/Java Solutions"
   ]
 }

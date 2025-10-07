@@ -1,5 +1,3 @@
-package javasolutionsidid;
-
 public class SmallestLetter {
     public static void main(String[] args) {
         char[] letters = { 'c', 'f', 'j' };

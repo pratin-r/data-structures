@@ -1,5 +1,3 @@
-package javasolutionsidid;
-
 import java.util.HashMap;
 
 public class LongestPalindromicSubstring {
